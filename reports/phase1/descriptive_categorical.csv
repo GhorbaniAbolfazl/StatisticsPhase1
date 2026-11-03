@@ -1,0 +1,53 @@
+sample,stratum_variable,stratum_code,stratum_label,variable,level_code,level_label,n_population,n_available,n_unusable,count,percent_of_population,percent_of_available
+all_shared,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,1,مرد,1237,1237,0,497,40.177849636216656,40.177849636216656
+all_shared,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,2,زن,1237,1237,0,740,59.822150363783344,59.822150363783344
+all_shared,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,,غیرقابل استفاده,1237,1237,0,0,0.0,
+all_shared,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,1,طبیعی,1237,1237,0,847,68.47210994341148,68.47210994341148
+all_shared,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,2,اختلال بدون احراز MCI,1237,1237,0,7,0.5658852061438965,0.5658852061438965
+all_shared,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,3,MCI,1237,1237,0,252,20.371867421180276,20.371867421180276
+all_shared,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,4,دمانس,1237,1237,0,131,10.590137429264349,10.590137429264349
+all_shared,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,,غیرقابل استفاده,1237,1237,0,0,0.0,
+main_pair,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,1,مرد,1228,1228,0,496,40.39087947882736,40.39087947882736
+main_pair,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,2,زن,1228,1228,0,732,59.60912052117264,59.60912052117264
+main_pair,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,,غیرقابل استفاده,1228,1228,0,0,0.0,
+main_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,1,طبیعی,1228,1228,0,842,68.56677524429968,68.56677524429968
+main_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,2,اختلال بدون احراز MCI,1228,1228,0,7,0.5700325732899023,0.5700325732899023
+main_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,3,MCI,1228,1228,0,251,20.439739413680783,20.439739413680783
+main_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,4,دمانس,1228,1228,0,128,10.423452768729641,10.423452768729641
+main_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,,غیرقابل استفاده,1228,1228,0,0,0.0,
+main_common,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,1,مرد,1226,1226,0,494,40.29363784665579,40.29363784665579
+main_common,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,2,زن,1226,1226,0,732,59.70636215334421,59.70636215334421
+main_common,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,,غیرقابل استفاده,1226,1226,0,0,0.0,
+main_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,1,طبیعی,1226,1226,0,841,68.59706362153344,68.59706362153344
+main_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,2,اختلال بدون احراز MCI,1226,1226,0,7,0.5709624796084829,0.5709624796084829
+main_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,3,MCI,1226,1226,0,250,20.391517128874387,20.391517128874387
+main_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,4,دمانس,1226,1226,0,128,10.440456769983687,10.440456769983687
+main_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,,غیرقابل استفاده,1226,1226,0,0,0.0,
+integer_pair,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,1,مرد,984,984,0,391,39.735772357723576,39.735772357723576
+integer_pair,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,2,زن,984,984,0,593,60.264227642276424,60.264227642276424
+integer_pair,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,,غیرقابل استفاده,984,984,0,0,0.0,
+integer_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,1,طبیعی,984,984,0,636,64.63414634146342,64.63414634146342
+integer_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,2,اختلال بدون احراز MCI,984,984,0,4,0.4065040650406504,0.4065040650406504
+integer_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,3,MCI,984,984,0,226,22.96747967479675,22.96747967479675
+integer_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,4,دمانس,984,984,0,118,11.991869918699187,11.991869918699187
+integer_pair,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,,غیرقابل استفاده,984,984,0,0,0.0,
+integer_common,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,1,مرد,982,982,0,389,39.61303462321792,39.61303462321792
+integer_common,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,2,زن,982,982,0,593,60.38696537678208,60.38696537678208
+integer_common,overall,,همهٔ اعضای مجموعه,SEX_ANALYSIS,,غیرقابل استفاده,982,982,0,0,0.0,
+integer_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,1,طبیعی,982,982,0,635,64.66395112016293,64.66395112016293
+integer_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,2,اختلال بدون احراز MCI,982,982,0,4,0.4073319755600815,0.4073319755600815
+integer_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,3,MCI,982,982,0,225,22.912423625254583,22.912423625254583
+integer_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,4,دمانس,982,982,0,118,12.016293279022403,12.016293279022403
+integer_common,overall,,همهٔ اعضای مجموعه,NACCUDSD_ANALYSIS,,غیرقابل استفاده,982,982,0,0,0.0,
+main_pair,NACCUDSD_ANALYSIS,1,طبیعی,SEX_ANALYSIS,1,مرد,842,842,0,301,35.74821852731591,35.74821852731591
+main_pair,NACCUDSD_ANALYSIS,1,طبیعی,SEX_ANALYSIS,2,زن,842,842,0,541,64.25178147268409,64.25178147268409
+main_pair,NACCUDSD_ANALYSIS,1,طبیعی,SEX_ANALYSIS,,غیرقابل استفاده,842,842,0,0,0.0,
+main_pair,NACCUDSD_ANALYSIS,2,اختلال بدون احراز MCI,SEX_ANALYSIS,1,مرد,7,7,0,4,57.142857142857146,57.142857142857146
+main_pair,NACCUDSD_ANALYSIS,2,اختلال بدون احراز MCI,SEX_ANALYSIS,2,زن,7,7,0,3,42.857142857142854,42.857142857142854
+main_pair,NACCUDSD_ANALYSIS,2,اختلال بدون احراز MCI,SEX_ANALYSIS,,غیرقابل استفاده,7,7,0,0,0.0,
+main_pair,NACCUDSD_ANALYSIS,3,MCI,SEX_ANALYSIS,1,مرد,251,251,0,141,56.17529880478088,56.17529880478088
+main_pair,NACCUDSD_ANALYSIS,3,MCI,SEX_ANALYSIS,2,زن,251,251,0,110,43.82470119521912,43.82470119521912
+main_pair,NACCUDSD_ANALYSIS,3,MCI,SEX_ANALYSIS,,غیرقابل استفاده,251,251,0,0,0.0,
+main_pair,NACCUDSD_ANALYSIS,4,دمانس,SEX_ANALYSIS,1,مرد,128,128,0,50,39.0625,39.0625
+main_pair,NACCUDSD_ANALYSIS,4,دمانس,SEX_ANALYSIS,2,زن,128,128,0,78,60.9375,60.9375
+main_pair,NACCUDSD_ANALYSIS,4,دمانس,SEX_ANALYSIS,,غیرقابل استفاده,128,128,0,0,0.0,

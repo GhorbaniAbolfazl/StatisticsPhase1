@@ -1,0 +1,2329 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-31",
+  "reference_scope": "Numeric domains reviewed against the UDS v3 RDD and Genetic RDD. TA subset version and preprocessing remain unknown. Reference incompatibility is not proof of source-record error.",
+  "moca_fractional_policy": "retain_in_range_flag_and_integer_sensitivity",
+  "moca_policy_authority": "Explicit user selection in this chat on 2026-10-31.",
+  "raw_data_mutation_allowed": false,
+  "outlier_policy": "Tukey 1.5 IQR flags only; no deletion or winsorization.",
+  "uds": {
+    "NACCID": {
+      "kind": "identifier",
+      "pattern": "NACC[0-9]{6}",
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=41"
+    },
+    "SEX": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=49"
+    },
+    "HISPANIC": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=49"
+    },
+    "HISPOR": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        50.0
+      ],
+      "special": {
+        "88": "not_applicable",
+        "99": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=50"
+    },
+    "RACE": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        50.0
+      ],
+      "special": {
+        "99": "unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=50"
+    },
+    "PRIMLANG": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        8.0
+      ],
+      "special": {
+        "9": "unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=52"
+    },
+    "EDUC": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 36.0,
+      "step": 1,
+      "special": {
+        "99": "unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=53"
+    },
+    "MARISTAT": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "special": {
+        "9": "mixed_other_or_unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=53"
+    },
+    "NACCLIVS": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "special": {
+        "9": "unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=54"
+    },
+    "INDEPEND": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "special": {
+        "9": "unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=54"
+    },
+    "RESIDENC": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "special": {
+        "9": "mixed_other_or_unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=54"
+    },
+    "NACCNIHR": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "special": {
+        "99": "unknown_or_ambiguous"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=56"
+    },
+    "NACCAGE": {
+      "kind": "range",
+      "minimum": 18.0,
+      "maximum": 120.0,
+      "step": 1,
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=55"
+    },
+    "NACCFAM": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=65"
+    },
+    "NACCMOM": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=67"
+    },
+    "NACCDAD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=68"
+    },
+    "NACCAM": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        8.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=70"
+    },
+    "NACCAMS": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        8.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=70"
+    },
+    "NACCFM": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        8.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=71"
+    },
+    "NACCFMS": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        8.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=72"
+    },
+    "NACCOM": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=73"
+    },
+    "NACCOMS": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        8.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=73"
+    },
+    "NACCFADM": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=69",
+      "note": "Code 0 combines no with unknown; true missingness is not recoverable from that code."
+    },
+    "NACCFFTD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=71",
+      "note": "Code 0 combines no with unknown; true missingness is not recoverable from that code."
+    },
+    "ANYMEDS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=75"
+    },
+    "TOBAC30": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=97"
+    },
+    "TOBAC100": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=97"
+    },
+    "SMOKYRS": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 87.0,
+      "step": 1,
+      "special": {
+        "88": "not_applicable",
+        "99": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=97"
+    },
+    "PACKSPER": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=98"
+    },
+    "QUITSMOK": {
+      "kind": "range",
+      "minimum": 7.0,
+      "maximum": 110.0,
+      "step": 1,
+      "special": {
+        "888": "not_applicable",
+        "999": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=98"
+    },
+    "CVHATT": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=100"
+    },
+    "CVAFIB": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=101"
+    },
+    "CVANGIO": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=101"
+    },
+    "CVBYPASS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=101"
+    },
+    "CVPACDEF": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=102"
+    },
+    "CVCHF": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=102"
+    },
+    "CVOTHR": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=103"
+    },
+    "CBSTROKE": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=104"
+    },
+    "CBTIA": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=105"
+    },
+    "SEIZURES": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=107"
+    },
+    "NACCTBI": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=123"
+    },
+    "TBI": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=108"
+    },
+    "TBIBRIEF": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=108"
+    },
+    "TBIEXTEN": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=109"
+    },
+    "TBIWOLOS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=110"
+    },
+    "DIABETES": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=111"
+    },
+    "DIABTYPE": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=112"
+    },
+    "HYPERTEN": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=112"
+    },
+    "HYPERCHO": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=113"
+    },
+    "B12DEF": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=113"
+    },
+    "THYROID": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=114"
+    },
+    "ARTHRIT": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=114"
+    },
+    "ARTHTYPE": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=114"
+    },
+    "ARTHUPEX": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=115"
+    },
+    "ARTHLOEX": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=115"
+    },
+    "ARTHSPIN": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=116"
+    },
+    "ARTHUNK": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=116"
+    },
+    "INCONTU": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=116"
+    },
+    "INCONTF": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=117"
+    },
+    "APNEA": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=117"
+    },
+    "RBD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=117"
+    },
+    "INSOMN": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=118"
+    },
+    "OTHSLEEP": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=118"
+    },
+    "ALCOHOL": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=119"
+    },
+    "ABUSOTHR": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=119"
+    },
+    "PTSD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=120"
+    },
+    "BIPOLAR": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=120"
+    },
+    "SCHIZ": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=120"
+    },
+    "DEP2YRS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=121"
+    },
+    "DEPOTHR": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=121"
+    },
+    "ANXIETY": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=121"
+    },
+    "OCD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=122"
+    },
+    "NPSYDEV": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=122"
+    },
+    "PSYCDIS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=122"
+    },
+    "NACCAAAS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=78"
+    },
+    "NACCAANX": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=91"
+    },
+    "NACCAC": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=87"
+    },
+    "NACCACEI": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=77"
+    },
+    "NACCADEP": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=89"
+    },
+    "NACCAHTN": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=75"
+    },
+    "NACCAMD": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 40.0,
+      "step": 1,
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=75"
+    },
+    "NACCANGI": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=82"
+    },
+    "NACCAPSY": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=90"
+    },
+    "NACCBETA": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=79"
+    },
+    "NACCCCBS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=80"
+    },
+    "NACCDBMD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=95"
+    },
+    "NACCDIUR": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=81"
+    },
+    "NACCEMD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=94"
+    },
+    "NACCEPMD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=94"
+    },
+    "NACCHTNC": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=76"
+    },
+    "NACCLIPL": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=83"
+    },
+    "NACCNSD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=84"
+    },
+    "NACCPDMD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=93"
+    },
+    "NACCVASD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "form_not_completed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=82"
+    },
+    "HEIGHT": {
+      "kind": "range",
+      "minimum": 36.0,
+      "maximum": 87.9,
+      "step": null,
+      "special": {
+        "88.8": "unknown_or_not_assessed",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=124"
+    },
+    "WEIGHT": {
+      "kind": "range",
+      "minimum": 50.0,
+      "maximum": 400.0,
+      "step": null,
+      "special": {
+        "888": "unknown_or_not_assessed",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=124"
+    },
+    "BPSYS": {
+      "kind": "range",
+      "minimum": 70.0,
+      "maximum": 230.0,
+      "step": null,
+      "special": {
+        "777": "alternate_form_recorded",
+        "888": "unknown_or_not_assessed",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=125"
+    },
+    "BPDIAS": {
+      "kind": "range",
+      "minimum": 30.0,
+      "maximum": 140.0,
+      "step": null,
+      "special": {
+        "777": "alternate_form_recorded",
+        "888": "unknown_or_not_assessed",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=125"
+    },
+    "HRATE": {
+      "kind": "range",
+      "minimum": 33.0,
+      "maximum": 160.0,
+      "step": null,
+      "special": {
+        "888": "unknown_or_not_assessed",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=128"
+    },
+    "VISION": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=128"
+    },
+    "VISCORR": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=128"
+    },
+    "VISWCORR": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=128"
+    },
+    "HEARING": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=129"
+    },
+    "HEARAID": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=129"
+    },
+    "HEARWAID": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=129"
+    },
+    "NACCBMI": {
+      "kind": "range",
+      "minimum": 10.0,
+      "maximum": 100.0,
+      "step": null,
+      "special": {
+        "888.8": "unknown_or_not_assessed",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=124",
+      "ambiguous_special": {
+        "888": "documentation_conflict_888_vs_888_8"
+      },
+      "note": "The table lists 888.8 while the derivation text uses 888; neither is a substantive BMI. The latter remains explicitly ambiguous."
+    },
+    "NACCNREX": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=181"
+    },
+    "NORMEXAM": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "special": {
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=181"
+    },
+    "NPIQINF": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=157"
+    },
+    "DEL": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=157"
+    },
+    "DELSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=158"
+    },
+    "HALL": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=158"
+    },
+    "HALLSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=159"
+    },
+    "AGIT": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=159"
+    },
+    "AGITSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=160"
+    },
+    "DEPD": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=160"
+    },
+    "DEPDSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=161"
+    },
+    "ANX": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=161"
+    },
+    "ANXSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=162"
+    },
+    "ELAT": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=162"
+    },
+    "ELATSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=163"
+    },
+    "APA": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=163"
+    },
+    "APASEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=164"
+    },
+    "DISN": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=164"
+    },
+    "DISNSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=165"
+    },
+    "IRR": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=165"
+    },
+    "IRRSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=166"
+    },
+    "MOT": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=166"
+    },
+    "MOTSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=167"
+    },
+    "NITE": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=167"
+    },
+    "NITESEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=168"
+    },
+    "APP": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=168"
+    },
+    "APPSEV": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=169"
+    },
+    "NOGDS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=170"
+    },
+    "SATIS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=170"
+    },
+    "DROPACT": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=170"
+    },
+    "EMPTY": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=171"
+    },
+    "BORED": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=171"
+    },
+    "SPIRITS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=171"
+    },
+    "AFRAID": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=172"
+    },
+    "HAPPY": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=172"
+    },
+    "HELPLESS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=172"
+    },
+    "STAYHOME": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=173"
+    },
+    "MEMPROB": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=173"
+    },
+    "WONDRFUL": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=173"
+    },
+    "WRTHLESS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=174"
+    },
+    "ENERGY": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=174"
+    },
+    "HOPELESS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=174"
+    },
+    "BETTER": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "9": "no_response",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=175"
+    },
+    "NACCGDS": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 15.0,
+      "step": 1,
+      "special": {
+        "88": "not_calculated",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=175"
+    },
+    "BILLS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=176"
+    },
+    "TAXES": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=176"
+    },
+    "SHOPPING": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=177"
+    },
+    "GAMES": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=177"
+    },
+    "STOVE": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=178"
+    },
+    "MEALPREP": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=178"
+    },
+    "EVENTS": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=179"
+    },
+    "PAYATTN": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=179"
+    },
+    "REMDATES": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=180"
+    },
+    "TRAVEL": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {
+        "8": "not_applicable",
+        "9": "unknown",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=180"
+    },
+    "DECSUB": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0
+      ],
+      "special": {
+        "8": "not_assessable",
+        "9": "unknown"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=196"
+    },
+    "ANIMALS": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 77.0,
+      "step": 1,
+      "special": {
+        "95": "physical_problem",
+        "96": "cognitive_behavior_problem",
+        "97": "other_problem",
+        "98": "refusal",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=226"
+    },
+    "VEG": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 77.0,
+      "step": 1,
+      "special": {
+        "95": "physical_problem",
+        "96": "cognitive_behavior_problem",
+        "97": "other_problem",
+        "98": "refusal",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=226"
+    },
+    "TRAILA": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 150.0,
+      "step": 1,
+      "special": {
+        "995": "physical_problem",
+        "996": "cognitive_behavior_problem",
+        "997": "other_problem",
+        "998": "refusal",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=227"
+    },
+    "TRAILARR": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 40.0,
+      "step": 1,
+      "special": {
+        "95": "physical_problem",
+        "96": "cognitive_behavior_problem",
+        "97": "other_problem",
+        "98": "refusal",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=227"
+    },
+    "TRAILALI": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 24.0,
+      "step": 1,
+      "special": {
+        "95": "physical_problem",
+        "96": "cognitive_behavior_problem",
+        "97": "other_problem",
+        "98": "refusal",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=228"
+    },
+    "TRAILB": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 300.0,
+      "step": 1,
+      "special": {
+        "995": "physical_problem",
+        "996": "cognitive_behavior_problem",
+        "997": "other_problem",
+        "998": "refusal",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=228"
+    },
+    "TRAILBRR": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 40.0,
+      "step": 1,
+      "special": {
+        "95": "physical_problem",
+        "96": "cognitive_behavior_problem",
+        "97": "other_problem",
+        "98": "refusal",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=229"
+    },
+    "TRAILBLI": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 24.0,
+      "step": 1,
+      "special": {
+        "95": "physical_problem",
+        "96": "cognitive_behavior_problem",
+        "97": "other_problem",
+        "98": "refusal",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=229"
+    },
+    "MOCATOTS": {
+      "kind": "range",
+      "minimum": 0.0,
+      "maximum": 30.0,
+      "step": 1,
+      "special": {
+        "88": "test_not_administered",
+        "-4": "not_available_or_skip"
+      },
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=238"
+    },
+    "NACCAPOE": {
+      "kind": "set",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "special": {
+        "9": "unknown_or_not_assessed"
+      },
+      "source": "https://files.alz.washington.edu/documentation/rdd-genetic-data.pdf#page=6"
+    },
+    "NACCUDSD": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=269"
+    },
+    "MEMORY": {
+      "kind": "set",
+      "values": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=154"
+    },
+    "ORIENT": {
+      "kind": "set",
+      "values": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=154"
+    },
+    "JUDGMENT": {
+      "kind": "set",
+      "values": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=154"
+    },
+    "COMMUN": {
+      "kind": "set",
+      "values": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=154"
+    },
+    "HOMEHOBB": {
+      "kind": "set",
+      "values": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=154"
+    },
+    "PERSCARE": {
+      "kind": "set",
+      "values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=155"
+    },
+    "CDRSUM": {
+      "kind": "range",
+      "minimum": 0,
+      "maximum": 18,
+      "step": 0.5,
+      "excluded_values": [
+        16.5,
+        17.5
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=155"
+    },
+    "CDRGLOB": {
+      "kind": "set",
+      "values": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=155"
+    }
+  },
+  "mri": {
+    "NACCID": {
+      "kind": "identifier",
+      "pattern": "NACC[0-9]{6}",
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=41"
+    },
+    "NACCUDSD": {
+      "kind": "set",
+      "values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "special": {},
+      "source": "https://files.alz.washington.edu/documentation/uds3-rdd.pdf#page=269"
+    },
+    "measurements": {
+      "suffixes": [
+        "GVOL",
+        "AVGTH"
+      ],
+      "numeric_minimum_exclusive": 0,
+      "upper_bound": null,
+      "special_codes": {},
+      "scope": "Mechanical usability check, not an imaging-QC certification. Nonpositive unselected measurements are flagged, not used to exclude an entire person.",
+      "source": "https://files.alz.washington.edu/documentation/SCAN-MRI-Imaging-RDD.pdf"
+    }
+  },
+  "selected": {
+    "response": "MOCATOTS",
+    "covariates": [
+      "NACCAGE",
+      "SEX",
+      "EDUC"
+    ],
+    "group": "NACCUDSD",
+    "derived": "ENTORHINAL_THICKNESS_MEAN",
+    "inputs": [
+      "LH_ENTORHINAL_AVGTH",
+      "RH_ENTORHINAL_AVGTH"
+    ],
+    "formula": "(left + right) / 2; both inputs must be numerically usable",
+    "moca_valid_range": [
+      0,
+      30
+    ],
+    "rounding": false,
+    "reimputation": false,
+    "complete_case_scope": "Eligibility for paired outputs or future common model sample only; no global deletion from univariate summaries."
+  }
+}

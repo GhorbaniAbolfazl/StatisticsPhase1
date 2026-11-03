@@ -1,0 +1,15 @@
+scenario,parent_sample,step,criterion,description,n_before,n_removed,n_after
+main_pair,all_shared,0,start,شروع این شاخه؛ با شاخه‌های دیگر جمع نشود,1237,0,1237
+main_pair,all_shared,1,moca_not_special,کنارگذاشتن کدهای ویژهٔ پاسخ از این خروجی، نه از جدول مرجع,1237,4,1233
+main_pair,all_shared,2,moca_usable_main,نیاز به MoCA داخل دامنه طبق سیاست اصلی، شامل اعشار,1233,5,1228
+main_pair,all_shared,3,both_thicknesses_available,نیاز به هر دو ضخامت قابل استفاده برای میانگین,1228,0,1228
+main_common,main_pair,0,start,شروع این شاخه؛ با شاخه‌های دیگر جمع نشود,1228,0,1228
+main_common,main_pair,1,NACCAGE_available,نیاز به مقدار قابل استفادهٔ NACCAGE,1228,0,1228
+main_common,main_pair,2,SEX_available,نیاز به مقدار قابل استفادهٔ SEX,1228,0,1228
+main_common,main_pair,3,EDUC_available,نیاز به مقدار قابل استفادهٔ EDUC,1228,2,1226
+integer_pair,main_pair,0,start,شروع این شاخه؛ با شاخه‌های دیگر جمع نشود,1228,0,1228
+integer_pair,main_pair,1,moca_integer,فقط در سناریوی حساسیت، کنارگذاشتن اعشار درون دامنه,1228,244,984
+integer_common,integer_pair,0,start,شروع این شاخه؛ با شاخه‌های دیگر جمع نشود,984,0,984
+integer_common,integer_pair,1,NACCAGE_available,نیاز به مقدار قابل استفادهٔ NACCAGE,984,0,984
+integer_common,integer_pair,2,SEX_available,نیاز به مقدار قابل استفادهٔ SEX,984,0,984
+integer_common,integer_pair,3,EDUC_available,نیاز به مقدار قابل استفادهٔ EDUC,984,2,982

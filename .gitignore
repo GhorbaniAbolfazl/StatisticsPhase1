@@ -1,0 +1,12 @@
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+dist/
+tmp/
+# Course guide, pp. 18-19: original TA files stay local.
+data/udslong_imputed.csv
+data/mriscanclean.csv
+data/combined_adjacency_matrix.csv

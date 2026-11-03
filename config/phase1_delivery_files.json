@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "phase": 1,
+  "status": "local_validation_external_delivery_by_student",
+  "review_date": "2026-11-03",
+  "purpose": "Phase-one local inventory. Original TA CSVs are required locally but excluded from the submission ZIP under course guide pp. 18-19. See docs/PHASE1_FINAL_CHECK.md for evidence and remaining external actions.",
+  "preserve_relative_paths": true,
+  "report_pdf": "Persian report reports/phase1.pdf is included at the student request, with a reproducible builder, embedded student-supplied IranSansX(Pro) fonts and a source/hash manifest. The notebook with saved outputs is also included. docs/amarpr.pdf is the separate course source.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "primary",
+      "generated": false
+    },
+    {
+      "path": "PROJECT_CARD.md",
+      "role": "primary",
+      "generated": false
+    },
+    {
+      "path": "notebooks/phase1.ipynb",
+      "role": "primary",
+      "generated": false
+    },
+    {
+      "path": "docs/DATA_MAP.md",
+      "role": "method_documentation",
+      "generated": false
+    },
+    {
+      "path": "docs/SELECTED_VARIABLES.md",
+      "role": "method_documentation",
+      "generated": false
+    },
+    {
+      "path": "docs/QUALITY_RULES.md",
+      "role": "method_documentation",
+      "generated": false
+    },
+    {
+      "path": "docs/PHASE1_DELIVERY.md",
+      "role": "method_documentation",
+      "generated": false
+    },
+    {
+      "path": "data/README.md",
+      "role": "method_documentation",
+      "generated": false
+    },
+    {
+      "path": "docs/amarpr.pdf",
+      "role": "source_inputs",
+      "generated": false
+    },
+    {
+      "path": "data/udslong_imputed.csv",
+      "role": "source_inputs",
+      "generated": false,
+      "archive": false
+    },
+    {
+      "path": "data/mriscanclean.csv",
+      "role": "source_inputs",
+      "generated": false,
+      "archive": false
+    },
+    {
+      "path": "data/combined_adjacency_matrix.csv",
+      "role": "source_inputs",
+      "generated": false,
+      "archive": false
+    },
+    {
+      "path": "data/processed/phase1_participants.csv",
+      "role": "derived_data",
+      "generated": true
+    },
+    {
+      "path": "data/processed/phase1_manifest.json",
+      "role": "derived_data",
+      "generated": true
+    },
+    {
+      "path": "requirements.txt",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": ".gitignore",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "scripts/run_phase1_notebook.py",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "config/phase1_quality_rules.json",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "config/phase1_delivery_files.json",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "src/phase1_dataset.py",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "src/phase1_descriptive.py",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "src/phase1_figures.py",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "src/phase1_quality.py",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "tests/test_phase1_dataset.py",
+      "role": "tests",
+      "generated": false
+    },
+    {
+      "path": "tests/test_phase1_descriptive.py",
+      "role": "tests",
+      "generated": false
+    },
+    {
+      "path": "tests/test_phase1_figures.py",
+      "role": "tests",
+      "generated": false
+    },
+    {
+      "path": "tests/test_phase1_quality.py",
+      "role": "tests",
+      "generated": false
+    },
+    {
+      "path": "reports/phase1/conclusion.md",
+      "role": "scientific_outputs",
+      "generated": false
+    },
+    {
+      "path": "reports/phase1/denominators.csv",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/descriptive_categorical.csv",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/descriptive_discrete_frequencies.csv",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/descriptive_numeric.csv",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/descriptive_statistics.json",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/descriptive_statistics.md",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures/01_moca_distribution.png",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures/01_moca_distribution.svg",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures/02_entorhinal_distribution.png",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures/02_entorhinal_distribution.svg",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures/03_cognitive_status.png",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures/03_cognitive_status.svg",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures/04_group_comparison.png",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures/04_group_comparison.svg",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures.md",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/figures_metadata.json",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/quality_audit.json",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/quality_audit.md",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/quality_issues.json",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/sample_flow.csv",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/sample_flow.md",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "scripts/package_phase1.py",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "docs/PHASE1_FINAL_CHECK.md",
+      "role": "delivery_validation",
+      "generated": false
+    },
+    {
+      "path": "scripts/build_phase1_pdf.py",
+      "role": "reproducibility",
+      "generated": false
+    },
+    {
+      "path": "reports/phase1.pdf",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "reports/phase1/pdf_manifest.json",
+      "role": "scientific_outputs",
+      "generated": true
+    },
+    {
+      "path": "tests/test_phase1_pdf.py",
+      "role": "tests",
+      "generated": false
+    },
+    {
+      "path": "assets/fonts/IranSansX(Pro)/iransansX family/IRANSansX-Regular.ttf",
+      "role": "report_assets",
+      "generated": false
+    },
+    {
+      "path": "assets/fonts/IranSansX(Pro)/iransansX family/IRANSansX-Bold.ttf",
+      "role": "report_assets",
+      "generated": false
+    },
+    {
+      "path": "assets/fonts/IranSansX(Pro)/licenses.pdf",
+      "role": "report_assets",
+      "generated": false
+    },
+    {
+      "path": "tests/__init__.py",
+      "role": "tests",
+      "generated": false
+    },
+    {
+      "path": "tests/test_phase1_package.py",
+      "role": "tests",
+      "generated": false
+    }
+  ],
+  "excluded_patterns": [
+    ".git/**",
+    ".idea/**",
+    ".venv/**",
+    "**/__pycache__/**",
+    "**/*.pyc",
+    "**/.ipynb_checkpoints/**",
+    "**/.DS_Store",
+    "dist/**"
+  ],
+  "raw_data_policy": "Entries with archive=false are original TA inputs. Verification restores only checksum-matched local copies in a temporary directory. No original data is uploaded or modified."
+}

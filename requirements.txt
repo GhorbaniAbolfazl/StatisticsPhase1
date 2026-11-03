@@ -1,0 +1,12 @@
+# Core audit/dataset/descriptive tables use only the standard library (Python >= 3.10).
+# These packages support executing and validating the project notebook.
+nbformat==5.10.4
+nbclient==0.10.4
+ipykernel==7.1.0
+# Scientific figures: Python >= 3.11 with the pinned NumPy below.
+numpy==2.4.1
+matplotlib==3.10.8
+# Persian PDF report (embedded IranSansX(Pro) fonts are included under assets/fonts).
+reportlab==4.4.9
+arabic-reshaper==3.0.0
+python-bidi==0.6.7

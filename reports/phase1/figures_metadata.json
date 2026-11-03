@@ -1,0 +1,465 @@
+{
+  "n_all_shared": 1237,
+  "n_main_pair": 1228,
+  "groups": [
+    {
+      "code": 1,
+      "label": "Normal cognition",
+      "label_fa": "طبیعی",
+      "color": "#0072B2",
+      "n_all_shared": 847,
+      "n_main_pair": 842,
+      "moca": {
+        "n": 842,
+        "mean": 26.174109263657954,
+        "med": 26.2,
+        "q1": 25.0,
+        "q3": 28.0,
+        "lower_fence": 20.5,
+        "upper_fence": 32.5,
+        "whislo": 20.6,
+        "whishi": 30.0,
+        "minimum": 10.0,
+        "maximum": 30.0,
+        "n_outside_group_fences": 17
+      },
+      "thickness": {
+        "n": 842,
+        "mean": 3.0903289786223276,
+        "med": 3.1037500000000002,
+        "q1": 2.9282500000000002,
+        "q3": 3.29675,
+        "lower_fence": 2.3755000000000006,
+        "upper_fence": 3.849499999999999,
+        "whislo": 2.3775,
+        "whishi": 3.806,
+        "minimum": 1.214,
+        "maximum": 3.8579999999999997,
+        "n_outside_group_fences": 15
+      }
+    },
+    {
+      "code": 2,
+      "label": "Impaired, not MCI",
+      "label_fa": "اختلال بدون احراز MCI",
+      "color": "#E69F00",
+      "n_all_shared": 7,
+      "n_main_pair": 7,
+      "moca": {
+        "n": 7,
+        "mean": 26.25714285714286,
+        "med": 26.8,
+        "q1": 25.8,
+        "q3": 27.7,
+        "lower_fence": 22.950000000000003,
+        "upper_fence": 30.549999999999997,
+        "whislo": 25.0,
+        "whishi": 29.0,
+        "minimum": 21.0,
+        "maximum": 29.0,
+        "n_outside_group_fences": 1
+      },
+      "thickness": {
+        "n": 7,
+        "mean": 3.243,
+        "med": 3.188,
+        "q1": 3.1319999999999997,
+        "q3": 3.3685,
+        "lower_fence": 2.777249999999999,
+        "upper_fence": 3.7232500000000006,
+        "whislo": 2.997,
+        "whishi": 3.515,
+        "minimum": 2.997,
+        "maximum": 3.515,
+        "n_outside_group_fences": 0
+      }
+    },
+    {
+      "code": 3,
+      "label": "MCI",
+      "label_fa": "MCI",
+      "color": "#009E73",
+      "n_all_shared": 252,
+      "n_main_pair": 251,
+      "moca": {
+        "n": 251,
+        "mean": 22.40159362549801,
+        "med": 23.0,
+        "q1": 20.0,
+        "q3": 25.0,
+        "lower_fence": 12.5,
+        "upper_fence": 32.5,
+        "whislo": 13.0,
+        "whishi": 30.0,
+        "minimum": 10.0,
+        "maximum": 30.0,
+        "n_outside_group_fences": 2
+      },
+      "thickness": {
+        "n": 251,
+        "mean": 2.909466135458167,
+        "med": 2.9665,
+        "q1": 2.6902500000000003,
+        "q3": 3.18675,
+        "lower_fence": 1.9455000000000007,
+        "upper_fence": 3.9314999999999998,
+        "whislo": 2.005,
+        "whishi": 3.925,
+        "minimum": 1.2355,
+        "maximum": 3.925,
+        "n_outside_group_fences": 6
+      }
+    },
+    {
+      "code": 4,
+      "label": "Dementia",
+      "label_fa": "دمانس",
+      "color": "#CC79A7",
+      "n_all_shared": 131,
+      "n_main_pair": 128,
+      "moca": {
+        "n": 128,
+        "mean": 16.4796875,
+        "med": 17.0,
+        "q1": 13.0,
+        "q3": 21.0,
+        "lower_fence": 1.0,
+        "upper_fence": 33.0,
+        "whislo": 2.0,
+        "whishi": 30.0,
+        "minimum": 0.0,
+        "maximum": 30.0,
+        "n_outside_group_fences": 1
+      },
+      "thickness": {
+        "n": 128,
+        "mean": 2.71581640625,
+        "med": 2.6975000000000002,
+        "q1": 2.4645,
+        "q3": 2.944,
+        "lower_fence": 1.7452500000000004,
+        "upper_fence": 3.6632499999999997,
+        "whislo": 1.7465000000000002,
+        "whishi": 3.5324999999999998,
+        "minimum": 1.7465000000000002,
+        "maximum": 3.5324999999999998,
+        "n_outside_group_fences": 0
+      }
+    }
+  ],
+  "moca": {
+    "n_usable": 1228,
+    "n_unusable": 9,
+    "n_integer": 984,
+    "n_fractional": 244,
+    "edges": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30
+    ],
+    "integer_counts": [
+      1,
+      3,
+      2,
+      6,
+      8,
+      12,
+      11,
+      14,
+      32,
+      41,
+      74,
+      128,
+      208,
+      239,
+      205
+    ],
+    "fractional_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      3,
+      10,
+      19,
+      79,
+      99,
+      31
+    ],
+    "summary": {
+      "n_population": 1228,
+      "n_usable": 1228,
+      "n_unusable": 0,
+      "percent_unusable": 0.0,
+      "n_distinct": 67,
+      "minimum": 0.0,
+      "maximum": 30.0,
+      "mean": 24.39299674267101,
+      "median": 25.4,
+      "sd_sample": 4.4248225296498935,
+      "q1": 23.0,
+      "q3": 27.0,
+      "iqr": 4.0,
+      "range": 30.0
+    }
+  },
+  "thickness": {
+    "n_usable": 1237,
+    "n_unusable": 0,
+    "edges": [
+      0.0,
+      0.1,
+      0.2,
+      0.30000000000000004,
+      0.4,
+      0.5,
+      0.6000000000000001,
+      0.7000000000000001,
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2000000000000002,
+      1.3,
+      1.4000000000000001,
+      1.5,
+      1.6,
+      1.7000000000000002,
+      1.8,
+      1.9000000000000001,
+      2.0,
+      2.1,
+      2.2,
+      2.3000000000000003,
+      2.4000000000000004,
+      2.5,
+      2.6,
+      2.7,
+      2.8000000000000003,
+      2.9000000000000004,
+      3.0,
+      3.1,
+      3.2,
+      3.3000000000000003,
+      3.4000000000000004,
+      3.5,
+      3.6,
+      3.7,
+      3.8000000000000003,
+      3.9000000000000004,
+      4.0,
+      4.1000000000000005,
+      4.2
+    ],
+    "counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      3,
+      1,
+      3,
+      7,
+      10,
+      17,
+      23,
+      30,
+      53,
+      63,
+      91,
+      89,
+      142,
+      157,
+      164,
+      126,
+      105,
+      69,
+      48,
+      23,
+      5,
+      3,
+      1,
+      0,
+      0
+    ],
+    "summary": {
+      "n_population": 1237,
+      "n_usable": 1237,
+      "n_unusable": 0,
+      "percent_unusable": 0.0,
+      "n_distinct": 1018,
+      "minimum": 1.214,
+      "maximum": 3.925,
+      "mean": 3.0137627324171383,
+      "median": 3.0575,
+      "sd_sample": 0.3560963932305632,
+      "q1": 2.8025,
+      "q3": 3.2515,
+      "iqr": 0.44899999999999984,
+      "range": 2.711
+    }
+  },
+  "provenance": {
+    "protected_sha256": {
+      "data/udslong_imputed.csv": "8bcd0180d1b593092f7b2f7777281f59c4a6e9c3b2b041b5d2a33ed13be55e63",
+      "data/mriscanclean.csv": "3a2b34f7902592705f75ce3ad4c4fab68880470f01e7b9eb9823a799dc092e72",
+      "data/combined_adjacency_matrix.csv": "f7a0ed04de23f8e2c91555376f839d0fcbcf9a20d24f4c294b76ef18bc470671",
+      "docs/amarpr.pdf": "ede1706ab440f1ae737a71afaf0a37438112e7b010e6a5118b8f334b4c0d03e3",
+      "data/processed/phase1_participants.csv": "fe2e97ec3b67e79542405a78e3333ca4a8c97cae99de5351d32caa995c163cbd",
+      "data/processed/phase1_manifest.json": "efbdb76f79f0b54e5981c13125f8a5720338d172d98d4687775c93fd9a6feb3f",
+      "reports/phase1/descriptive_numeric.csv": "b465327f2fbb9d77b40ead4184828a033b501ae6ff3d8ececa9ab4e2ba72ba66",
+      "reports/phase1/descriptive_categorical.csv": "68a43ba6fe462e7f096c2622d6dac7d4dd95483fbf083ae875ef64ff69cb59be",
+      "reports/phase1/descriptive_discrete_frequencies.csv": "410e3dabcfa3118551db463c4ebec9b546c418ede7314ce71e4a32ca0980fdfa",
+      "reports/phase1/descriptive_statistics.md": "5f062c4cfde1a0df0e1ace526a64bbc03d5090c78b66652b710b021b1513bb81",
+      "reports/phase1/descriptive_statistics.json": "ea5e6e93d0e4ff6f0c81cf67b038d8f793461d2bdd20182142fd3aa6e7e037e9"
+    },
+    "code_sha256": {
+      "src/phase1_figures.py": "e96a64f8ba9418d3700fb223b5988e793d5e271089792442cfc018c8127a501d"
+    }
+  },
+  "design": {
+    "figure_count": 4,
+    "formats": [
+      "png",
+      "svg"
+    ],
+    "png_dpi": 300,
+    "labels_language": "English labels inside figures, Persian captions/interpretation",
+    "histogram_intervals": "[left,right), final interval includes right endpoint; no rounding of individual scores",
+    "moca_bin_width_score": 2,
+    "thickness_bin_width_mm": 0.1,
+    "box_quantiles": "Linear/inclusive type 7; box Q1-Q3, central line median; whiskers most extreme observed values within 1.5 IQR group fences",
+    "raw_points": "All paired participants in both panels; no vertical jitter, no outlier deletion; x jitter only for visibility",
+    "horizontal_jitter_seed": 20261031,
+    "horizontal_jitter_half_width": 0.14,
+    "group_box_width": 0.55,
+    "group_order": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "axes": {
+      "moca_x": [
+        -0.3,
+        30.3
+      ],
+      "thickness_x": [
+        0,
+        4.2
+      ],
+      "group_moca_y": [
+        -0.75,
+        30.75
+      ],
+      "group_thickness_y": [
+        0,
+        4.2
+      ]
+    },
+    "inference": "Descriptive only; no regression, correlation, p-values, confidence intervals, KDE or normal fit"
+  },
+  "files": [
+    "reports/phase1/figures/01_moca_distribution.png",
+    "reports/phase1/figures/01_moca_distribution.svg",
+    "reports/phase1/figures/02_entorhinal_distribution.png",
+    "reports/phase1/figures/02_entorhinal_distribution.svg",
+    "reports/phase1/figures/03_cognitive_status.png",
+    "reports/phase1/figures/03_cognitive_status.svg",
+    "reports/phase1/figures/04_group_comparison.png",
+    "reports/phase1/figures/04_group_comparison.svg"
+  ],
+  "visual_checks": {
+    "01_moca_distribution": {
+      "text_within_canvas": true,
+      "axes": 1,
+      "figure_inches": [
+        10.0,
+        6.0
+      ],
+      "raw_points_per_panel": []
+    },
+    "02_entorhinal_distribution": {
+      "text_within_canvas": true,
+      "axes": 1,
+      "figure_inches": [
+        10.0,
+        6.0
+      ],
+      "raw_points_per_panel": []
+    },
+    "03_cognitive_status": {
+      "text_within_canvas": true,
+      "axes": 1,
+      "figure_inches": [
+        10.0,
+        5.8
+      ],
+      "raw_points_per_panel": []
+    },
+    "04_group_comparison": {
+      "text_within_canvas": true,
+      "axes": 2,
+      "figure_inches": [
+        11.0,
+        6.8
+      ],
+      "raw_points_per_panel": [
+        842,
+        7,
+        251,
+        128,
+        842,
+        7,
+        251,
+        128
+      ]
+    }
+  },
+  "versions": {
+    "numpy": "2.4.1",
+    "matplotlib": "3.10.8"
+  },
+  "output_sha256": {
+    "reports/phase1/figures/01_moca_distribution.png": "7748ce71e4ddefb1f108e682f7b51213e5c6d89a47d3e4beff244851f309281a",
+    "reports/phase1/figures/01_moca_distribution.svg": "b4d4739c1c6bc66769f8beb8f3f5c3cd85756e1958d06b5c5dc761aef0442cd7",
+    "reports/phase1/figures/02_entorhinal_distribution.png": "b26ec04d0130b69d44cbc5c5022a9a8419b60e260de96e945cc0f8e1d4226f35",
+    "reports/phase1/figures/02_entorhinal_distribution.svg": "b169ccd22a7ec8b82d3cc632e3e24baf04bf9f87b1df799cb54c3df619a2570d",
+    "reports/phase1/figures/03_cognitive_status.png": "082e728a57b00fa46777dae7a29424b4aa4e269137be3b02fe6234bddf1decde",
+    "reports/phase1/figures/03_cognitive_status.svg": "3ae2ab700668e20676a57ee393db7c5a2a82cb1fab5845b9b7a050964b3fd953",
+    "reports/phase1/figures/04_group_comparison.png": "367a4b386b5f2afc459a1be2651f06a5975edc325b2a46eace603e30c3d1b42f",
+    "reports/phase1/figures/04_group_comparison.svg": "0f597a1274dee981843f4105b41cd90e9e834d713c3dc2ee5f8b9d6ed697e4b8",
+    "reports/phase1/figures.md": "8fd4f93dc2da99774c9e8fe4abd7aac3560b2e3ba3ab27919d3c4522a773af12"
+  }
+}

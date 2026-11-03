@@ -1,0 +1,41 @@
+sample,variable,n_population,n_usable,n_unusable,percent_unusable,unusable_reason_counts
+all_shared,MOCATOTS_ANALYSIS,1237,1228,9,0.7275666936135813,"{""known_special:test_not_administered"": 4, ""outside_reference_range"": 5}"
+all_shared,NACCAGE_ANALYSIS,1237,1237,0,0.0,{}
+all_shared,SEX_ANALYSIS,1237,1237,0,0.0,{}
+all_shared,EDUC_ANALYSIS,1237,1235,2,0.16168148746968472,"{""known_special:unknown"": 2}"
+all_shared,NACCUDSD_ANALYSIS,1237,1237,0,0.0,{}
+all_shared,LH_ENTORHINAL_AVGTH_ANALYSIS,1237,1237,0,0.0,{}
+all_shared,RH_ENTORHINAL_AVGTH_ANALYSIS,1237,1237,0,0.0,{}
+all_shared,ENTORHINAL_THICKNESS_MEAN,1237,1237,0,0.0,{}
+main_pair,MOCATOTS_ANALYSIS,1228,1228,0,0.0,{}
+main_pair,NACCAGE_ANALYSIS,1228,1228,0,0.0,{}
+main_pair,SEX_ANALYSIS,1228,1228,0,0.0,{}
+main_pair,EDUC_ANALYSIS,1228,1226,2,0.16286644951140064,"{""known_special:unknown"": 2}"
+main_pair,NACCUDSD_ANALYSIS,1228,1228,0,0.0,{}
+main_pair,LH_ENTORHINAL_AVGTH_ANALYSIS,1228,1228,0,0.0,{}
+main_pair,RH_ENTORHINAL_AVGTH_ANALYSIS,1228,1228,0,0.0,{}
+main_pair,ENTORHINAL_THICKNESS_MEAN,1228,1228,0,0.0,{}
+main_common,MOCATOTS_ANALYSIS,1226,1226,0,0.0,{}
+main_common,NACCAGE_ANALYSIS,1226,1226,0,0.0,{}
+main_common,SEX_ANALYSIS,1226,1226,0,0.0,{}
+main_common,EDUC_ANALYSIS,1226,1226,0,0.0,{}
+main_common,NACCUDSD_ANALYSIS,1226,1226,0,0.0,{}
+main_common,LH_ENTORHINAL_AVGTH_ANALYSIS,1226,1226,0,0.0,{}
+main_common,RH_ENTORHINAL_AVGTH_ANALYSIS,1226,1226,0,0.0,{}
+main_common,ENTORHINAL_THICKNESS_MEAN,1226,1226,0,0.0,{}
+integer_pair,MOCATOTS_ANALYSIS,984,984,0,0.0,{}
+integer_pair,NACCAGE_ANALYSIS,984,984,0,0.0,{}
+integer_pair,SEX_ANALYSIS,984,984,0,0.0,{}
+integer_pair,EDUC_ANALYSIS,984,982,2,0.2032520325203252,"{""known_special:unknown"": 2}"
+integer_pair,NACCUDSD_ANALYSIS,984,984,0,0.0,{}
+integer_pair,LH_ENTORHINAL_AVGTH_ANALYSIS,984,984,0,0.0,{}
+integer_pair,RH_ENTORHINAL_AVGTH_ANALYSIS,984,984,0,0.0,{}
+integer_pair,ENTORHINAL_THICKNESS_MEAN,984,984,0,0.0,{}
+integer_common,MOCATOTS_ANALYSIS,982,982,0,0.0,{}
+integer_common,NACCAGE_ANALYSIS,982,982,0,0.0,{}
+integer_common,SEX_ANALYSIS,982,982,0,0.0,{}
+integer_common,EDUC_ANALYSIS,982,982,0,0.0,{}
+integer_common,NACCUDSD_ANALYSIS,982,982,0,0.0,{}
+integer_common,LH_ENTORHINAL_AVGTH_ANALYSIS,982,982,0,0.0,{}
+integer_common,RH_ENTORHINAL_AVGTH_ANALYSIS,982,982,0,0.0,{}
+integer_common,ENTORHINAL_THICKNESS_MEAN,982,982,0,0.0,{}

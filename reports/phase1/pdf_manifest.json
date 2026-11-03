@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "report": "reports/phase1.pdf",
+  "report_date": "2026-11-03",
+  "language": "fa",
+  "pages": 18,
+  "pdf_sha256": "70f12746300f962afae59110de2289f20d69528b4b6afae71931d18d84c7536d",
+  "sources": {
+    "file_sha256": {
+      "scripts/build_phase1_pdf.py": "b6c01602f5ccc4c3840d4ed862815f83b5ce29fcbdd41ab19895893bb9996a7a",
+      "requirements.txt": "abc950dbff72c1223af0f61850cc1372793d97e82195f871a73e61ee7e2ce01b",
+      "PROJECT_CARD.md": "e0ddd1b3f0270351fa6805cb0100305b3618c6be023b3e1ffb4e41ae14fe7e51",
+      "docs/SELECTED_VARIABLES.md": "e03d6dc39bd53252ce385c28ab6086c005442620791467e7c259eea5cf82b392",
+      "docs/QUALITY_RULES.md": "59456be4b4916eeb3ed1c5871ed5a51fd8f72af30a00fe4fb384b61a6457684b",
+      "reports/phase1/conclusion.md": "82f0e08b760f6ee44eb5f8543efdcd314da8757b65d5127821eb0a6c9bcf1f4e",
+      "reports/phase1/quality_audit.json": "b8b99a1c79ede998f66c8e1740d8ceec51217ff5cb615eee34dc000b7222eed3",
+      "reports/phase1/descriptive_statistics.json": "ea5e6e93d0e4ff6f0c81cf67b038d8f793461d2bdd20182142fd3aa6e7e037e9",
+      "reports/phase1/figures_metadata.json": "eabcc825e5b9e7308d4210e3383f0b47c3cdfc71f10a6b3a7829a752d956b7d3",
+      "data/processed/phase1_manifest.json": "efbdb76f79f0b54e5981c13125f8a5720338d172d98d4687775c93fd9a6feb3f",
+      "reports/phase1/sample_flow.csv": "75ef80a99fa9ce6d879f1175d55a162be19c23024c5a5152ce8c17789d5d81d3",
+      "reports/phase1/denominators.csv": "cc82ed5ca042d19e7372965204de3610dc235f1b8b95be9c08773e41107c2565",
+      "assets/fonts/IranSansX(Pro)/iransansX family/IRANSansX-Regular.ttf": "8eb636a5dd5c3a0014cc3b1321bf61e89a40b302c5407862b3f1892e786ee32f",
+      "assets/fonts/IranSansX(Pro)/iransansX family/IRANSansX-Bold.ttf": "6c557ec979a0545b70ac1b15664c856f2e5d0af8b647a907110997bb9d6aba3c",
+      "assets/fonts/IranSansX(Pro)/licenses.pdf": "825d3cc836c7d5d0ff689461185cb430ac846515cb4a32535b7d9bccfc7106c3",
+      "reports/phase1/figures/01_moca_distribution.png": "7748ce71e4ddefb1f108e682f7b51213e5c6d89a47d3e4beff244851f309281a",
+      "reports/phase1/figures/02_entorhinal_distribution.png": "b26ec04d0130b69d44cbc5c5022a9a8419b60e260de96e945cc0f8e1d4226f35",
+      "reports/phase1/figures/03_cognitive_status.png": "082e728a57b00fa46777dae7a29424b4aa4e269137be3b02fe6234bddf1decde",
+      "reports/phase1/figures/04_group_comparison.png": "367a4b386b5f2afc459a1be2651f06a5975edc325b2a46eace603e30c3d1b42f"
+    },
+    "notebook_content_sha256": "07eee7f25d3c3794886bfaaf5eebe782384205f2be34854626b78cd695a8fd11"
+  },
+  "font_family": "IRANSansX",
+  "font_files": {
+    "Fa": "assets/fonts/IranSansX(Pro)/iransansX family/IRANSansX-Regular.ttf",
+    "FaBold": "assets/fonts/IranSansX(Pro)/iransansX family/IRANSansX-Bold.ttf"
+  },
+  "reportlab_version": "4.4.9",
+  "source_policy": "Scientific notebook content excludes execution timing metadata; raw data and numerical results are unchanged by PDF generation.",
+  "scope": "Persian scientific phase-one report; descriptive only; not a submission receipt."
+}

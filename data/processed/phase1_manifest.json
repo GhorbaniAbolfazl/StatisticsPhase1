@@ -1,0 +1,499 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "decision_date": "2026-10-31",
+  "scope": "Derived intermediate table of every shared participant; row inclusion in a particular analysis requires its explicit flag.",
+  "dataset": "data/processed/phase1_participants.csv",
+  "rows": 1237,
+  "columns": 45,
+  "encoding": "UTF-8",
+  "csv_null": "Empty cell in nullable fields only; raw strings and empty exclusion reasons remain strings.",
+  "csv_boolean": "1=true, 0=false; blank nullable IQR flag means not evaluated, not false.",
+  "numeric_precision": "Python round-trip float representation; no analytical rounding or clipping.",
+  "input_sha256": {
+    "data/udslong_imputed.csv": "8bcd0180d1b593092f7b2f7777281f59c4a6e9c3b2b041b5d2a33ed13be55e63",
+    "data/mriscanclean.csv": "3a2b34f7902592705f75ce3ad4c4fab68880470f01e7b9eb9823a799dc092e72",
+    "data/combined_adjacency_matrix.csv": "f7a0ed04de23f8e2c91555376f839d0fcbcf9a20d24f4c294b76ef18bc470671",
+    "docs/amarpr.pdf": "ede1706ab440f1ae737a71afaf0a37438112e7b010e6a5118b8f334b4c0d03e3"
+  },
+  "config_sha256": "505ce4623588bbe66fb2c4edf014442b18dd89e73cc2befc9cc1d7d5191be73f",
+  "code_sha256": {
+    "src/phase1_quality.py": "a843bf3b60b45cceff7c2868fe55e6ccc383cce71196126561a481f43abcea32",
+    "src/phase1_dataset.py": "a1a283e6da46f9975ad45a5614ab190d41af28f75279e5e2a05c28f2810c3916"
+  },
+  "output_sha256": {
+    "data/processed/phase1_participants.csv": "fe2e97ec3b67e79542405a78e3333ca4a8c97cae99de5351d32caa995c163cbd",
+    "reports/phase1/sample_flow.csv": "75ef80a99fa9ce6d879f1175d55a162be19c23024c5a5152ce8c17789d5d81d3",
+    "reports/phase1/denominators.csv": "cc82ed5ca042d19e7372965204de3610dc235f1b8b95be9c08773e41107c2565",
+    "reports/phase1/sample_flow.md": "ecc9c206c9399832205ab8a47621b23b271daa147a80e8e1b4ccc8aef8796a1e"
+  },
+  "join": {
+    "uds_rows": 1237,
+    "mri_rows": 1237,
+    "shared_unique_ids": 1237,
+    "uds_only_ids": [],
+    "mri_only_ids": [],
+    "join_kind": "inner_one_to_one_by_NACCID",
+    "canonical_group": "NACCUDSD from UDS after numeric agreement with MRI"
+  },
+  "samples": {
+    "main_pair": {
+      "flag": "MAIN_PAIR_ELIGIBLE",
+      "reasons_field": "MAIN_PAIR_EXCLUSION_REASONS",
+      "included": 1228,
+      "not_included": 9,
+      "sorted_identifier_sha256": "2aae76827ca2ebfc454053581115e68548075599f92e581a5c81b9234f6dc0ac",
+      "nonexclusive_reason_counts": {
+        "MOCA:outside_reference_range": 5,
+        "MOCA:known_special:test_not_administered": 4
+      }
+    },
+    "main_common": {
+      "flag": "MAIN_COMMON_SAMPLE_ELIGIBLE",
+      "reasons_field": "MAIN_COMMON_EXCLUSION_REASONS",
+      "included": 1226,
+      "not_included": 11,
+      "sorted_identifier_sha256": "19947beb625be3d876bece2e32d53354269cf78991a91bc2ff22c10bd4f4fbc2",
+      "nonexclusive_reason_counts": {
+        "MOCA:outside_reference_range": 5,
+        "MOCA:known_special:test_not_administered": 4,
+        "EDUC:known_special:unknown": 2
+      }
+    },
+    "integer_pair": {
+      "flag": "INTEGER_SENSITIVITY_PAIR_ELIGIBLE",
+      "reasons_field": "INTEGER_PAIR_EXCLUSION_REASONS",
+      "included": 984,
+      "not_included": 253,
+      "sorted_identifier_sha256": "1ca4760c2839edf85856362995cc14b2c7979212587183332e6b4f715eecfcfe",
+      "nonexclusive_reason_counts": {
+        "MOCA:fractional_in_range": 244,
+        "MOCA:outside_reference_range": 5,
+        "MOCA:known_special:test_not_administered": 4
+      }
+    },
+    "integer_common": {
+      "flag": "INTEGER_SENSITIVITY_COMMON_ELIGIBLE",
+      "reasons_field": "INTEGER_COMMON_EXCLUSION_REASONS",
+      "included": 982,
+      "not_included": 255,
+      "sorted_identifier_sha256": "592bb248a352b96f8dfb0db9a371ebc4948cefd725408e7fada1b84f961ad9e1",
+      "nonexclusive_reason_counts": {
+        "MOCA:fractional_in_range": 244,
+        "MOCA:outside_reference_range": 5,
+        "MOCA:known_special:test_not_administered": 4,
+        "EDUC:known_special:unknown": 2
+      }
+    }
+  },
+  "fields": [
+    {
+      "name": "NACCID",
+      "type": "string",
+      "nullable": false,
+      "role": "person_identifier",
+      "statistical_type": "person_identifier",
+      "unit": null,
+      "source": "UDS:NACCID, matched one-to-one to MRI:NACCID"
+    },
+    {
+      "name": "MOCATOTS_RAW",
+      "type": "string",
+      "nullable": false,
+      "role": "exact_selected_source_string",
+      "statistical_type": "exact_selected_source_string",
+      "unit": null,
+      "source": "UDS:MOCATOTS"
+    },
+    {
+      "name": "MOCATOTS_ANALYSIS",
+      "type": "number",
+      "nullable": true,
+      "role": "analysis_value",
+      "statistical_type": "bounded_score_including_flagged_prepared_decimals",
+      "unit": "score",
+      "source": "UDS:MOCATOTS"
+    },
+    {
+      "name": "MOCA_STATUS",
+      "type": "string",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "MOCA_DETAIL",
+      "type": "string",
+      "nullable": true,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "MOCA_FRACTIONAL_IN_RANGE",
+      "type": "boolean",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "MRI_MATCHED",
+      "type": "boolean",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "NACCAGE_ANALYSIS",
+      "type": "number",
+      "nullable": true,
+      "role": "analysis_value",
+      "statistical_type": "age_recorded_in_years",
+      "unit": "years",
+      "source": "UDS:NACCAGE"
+    },
+    {
+      "name": "NACCAGE_STATUS",
+      "type": "string",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "NACCAGE_DETAIL",
+      "type": "string",
+      "nullable": true,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "SEX_ANALYSIS",
+      "type": "number",
+      "nullable": true,
+      "role": "analysis_value",
+      "statistical_type": "categorical_codes_not_continuous_measurements",
+      "unit": null,
+      "source": "UDS:SEX"
+    },
+    {
+      "name": "SEX_STATUS",
+      "type": "string",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "SEX_DETAIL",
+      "type": "string",
+      "nullable": true,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "EDUC_ANALYSIS",
+      "type": "number",
+      "nullable": true,
+      "role": "analysis_value",
+      "statistical_type": "discrete_years",
+      "unit": "years",
+      "source": "UDS:EDUC"
+    },
+    {
+      "name": "EDUC_STATUS",
+      "type": "string",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "EDUC_DETAIL",
+      "type": "string",
+      "nullable": true,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "NACCUDSD_ANALYSIS",
+      "type": "number",
+      "nullable": true,
+      "role": "analysis_value",
+      "statistical_type": "categorical_codes_not_continuous_measurements",
+      "unit": null,
+      "source": "UDS:NACCUDSD"
+    },
+    {
+      "name": "NACCUDSD_STATUS",
+      "type": "string",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "NACCUDSD_DETAIL",
+      "type": "string",
+      "nullable": true,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "LH_ENTORHINAL_AVGTH_ANALYSIS",
+      "type": "number",
+      "nullable": true,
+      "role": "analysis_value",
+      "statistical_type": "continuous_measurement",
+      "unit": "mm",
+      "source": "MRI:LH_ENTORHINAL_AVGTH"
+    },
+    {
+      "name": "LH_ENTORHINAL_AVGTH_STATUS",
+      "type": "string",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "RH_ENTORHINAL_AVGTH_ANALYSIS",
+      "type": "number",
+      "nullable": true,
+      "role": "analysis_value",
+      "statistical_type": "continuous_measurement",
+      "unit": "mm",
+      "source": "MRI:RH_ENTORHINAL_AVGTH"
+    },
+    {
+      "name": "RH_ENTORHINAL_AVGTH_STATUS",
+      "type": "string",
+      "nullable": false,
+      "role": "quality_status_or_flag",
+      "statistical_type": "quality_status_or_flag",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "ENTORHINAL_THICKNESS_MEAN",
+      "type": "number",
+      "nullable": true,
+      "role": "analysis_value",
+      "statistical_type": "continuous_measurement",
+      "unit": "mm",
+      "source": "Arithmetic mean of the two usable MRI entorhinal AVGTH values for this identifier"
+    },
+    {
+      "name": "MAIN_PAIR_ELIGIBLE",
+      "type": "boolean",
+      "nullable": false,
+      "role": "sample_membership",
+      "statistical_type": "sample_membership",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "MAIN_COMMON_SAMPLE_ELIGIBLE",
+      "type": "boolean",
+      "nullable": false,
+      "role": "sample_membership",
+      "statistical_type": "sample_membership",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "INTEGER_SENSITIVITY_PAIR_ELIGIBLE",
+      "type": "boolean",
+      "nullable": false,
+      "role": "sample_membership",
+      "statistical_type": "sample_membership",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "INTEGER_SENSITIVITY_COMMON_ELIGIBLE",
+      "type": "boolean",
+      "nullable": false,
+      "role": "sample_membership",
+      "statistical_type": "sample_membership",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "UDS_CSV_LINE",
+      "type": "integer",
+      "nullable": false,
+      "role": "source_provenance",
+      "statistical_type": "source_provenance",
+      "unit": null,
+      "source": "CSV line in data/udslong_imputed.csv"
+    },
+    {
+      "name": "MRI_CSV_LINE",
+      "type": "integer",
+      "nullable": false,
+      "role": "source_provenance",
+      "statistical_type": "source_provenance",
+      "unit": null,
+      "source": "CSV line in data/mriscanclean.csv"
+    },
+    {
+      "name": "NACCAGE_RAW",
+      "type": "string",
+      "nullable": false,
+      "role": "exact_selected_source_string",
+      "statistical_type": "exact_selected_source_string",
+      "unit": null,
+      "source": "UDS:NACCAGE"
+    },
+    {
+      "name": "SEX_RAW",
+      "type": "string",
+      "nullable": false,
+      "role": "exact_selected_source_string",
+      "statistical_type": "exact_selected_source_string",
+      "unit": null,
+      "source": "UDS:SEX"
+    },
+    {
+      "name": "EDUC_RAW",
+      "type": "string",
+      "nullable": false,
+      "role": "exact_selected_source_string",
+      "statistical_type": "exact_selected_source_string",
+      "unit": null,
+      "source": "UDS:EDUC"
+    },
+    {
+      "name": "NACCUDSD_RAW_UDS",
+      "type": "string",
+      "nullable": false,
+      "role": "exact_selected_source_string",
+      "statistical_type": "exact_selected_source_string",
+      "unit": null,
+      "source": "UDS:NACCUDSD"
+    },
+    {
+      "name": "NACCUDSD_RAW_MRI",
+      "type": "string",
+      "nullable": false,
+      "role": "exact_selected_source_string",
+      "statistical_type": "exact_selected_source_string",
+      "unit": null,
+      "source": "MRI:NACCUDSD"
+    },
+    {
+      "name": "LH_ENTORHINAL_AVGTH_RAW",
+      "type": "string",
+      "nullable": false,
+      "role": "exact_selected_source_string",
+      "statistical_type": "exact_selected_source_string",
+      "unit": null,
+      "source": "MRI:LH_ENTORHINAL_AVGTH"
+    },
+    {
+      "name": "RH_ENTORHINAL_AVGTH_RAW",
+      "type": "string",
+      "nullable": false,
+      "role": "exact_selected_source_string",
+      "statistical_type": "exact_selected_source_string",
+      "unit": null,
+      "source": "MRI:RH_ENTORHINAL_AVGTH"
+    },
+    {
+      "name": "MOCA_IQR_FLAG",
+      "type": "boolean",
+      "nullable": true,
+      "role": "iqr_review_only",
+      "statistical_type": "iqr_review_only",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "AGE_IQR_FLAG",
+      "type": "boolean",
+      "nullable": true,
+      "role": "iqr_review_only",
+      "statistical_type": "iqr_review_only",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "EDUC_IQR_FLAG",
+      "type": "boolean",
+      "nullable": true,
+      "role": "iqr_review_only",
+      "statistical_type": "iqr_review_only",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "ENTORHINAL_IQR_FLAG",
+      "type": "boolean",
+      "nullable": true,
+      "role": "iqr_review_only",
+      "statistical_type": "iqr_review_only",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "MAIN_PAIR_EXCLUSION_REASONS",
+      "type": "string",
+      "nullable": false,
+      "role": "sample_exclusion_reasons",
+      "statistical_type": "sample_exclusion_reasons",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "MAIN_COMMON_EXCLUSION_REASONS",
+      "type": "string",
+      "nullable": false,
+      "role": "sample_exclusion_reasons",
+      "statistical_type": "sample_exclusion_reasons",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "INTEGER_PAIR_EXCLUSION_REASONS",
+      "type": "string",
+      "nullable": false,
+      "role": "sample_exclusion_reasons",
+      "statistical_type": "sample_exclusion_reasons",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    },
+    {
+      "name": "INTEGER_COMMON_EXCLUSION_REASONS",
+      "type": "string",
+      "nullable": false,
+      "role": "sample_exclusion_reasons",
+      "statistical_type": "sample_exclusion_reasons",
+      "unit": null,
+      "source": "Derived classification or sample/review flag; see quality and sample definitions"
+    }
+  ],
+  "no_global_subject_deletion": true,
+  "no_raw_data_changes": true,
+  "sensitivity_scope": "Integer-score inclusion scenario and counts only; no statistical effect comparison has been performed."
+}
